@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "strict": true,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "target": "es2019",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": true
+  },
+  "include": ["src/**/*"]
+}
