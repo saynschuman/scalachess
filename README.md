@@ -2,7 +2,7 @@
 
 ## Description
 
-Scalachess is a TypeScript module for chess game validation. This library provides move validation, game status checks, and support for various chess variants such as standard, chess960, antichess, atomic, and more. It enables developers to easily integrate comprehensive chess game logic into their applications.
+Scalachess is a TypeScript library for validating chess games. This library provides move validation, game status checks, and support for various chess variants such as standard, chess960, antichess, atomic, and more. It enables developers to easily integrate comprehensive chess game logic into their applications.
 
 ## Features
 
@@ -14,23 +14,19 @@ Scalachess is a TypeScript module for chess game validation. This library provid
 
 ## Installation
 
-This library is packaged as a module. To include it in your project, you can clone the repository or include it as a dependency in your package.json file.
+This library is available as an npm package. To include it in your project, you can clone the repository or include it as a dependency in your package.json file.
 
 ## Usage
 
-To use scalachess in your project, you'll need to import the necessary types and functions from the module. Here's a basic example:
+To use scalachess in your project, you'll need to download [scalachess.js](https://github.com/saynschuman/scalachess/blob/master/public/scalachess.js) worker and put it to your public directory. Then you can import the necessary types and functions from the module. Here's a basic example:
 
 ```javascript
 import { ScalaChess, SituationResponse } from 'scalachess'
 
-/**
- * Path to scalachess worker
- * Ex: https://github.com/saynschuman/scalachess/blob/master/public/scalachess.js
- */
 const worker = new Worker('/scalachess.js')
 const scalaChess = new ScalaChess(worker)
 
-const gemeSituation = (fen: string): SituationResponse => {
+const gameSituation = (fen: string): SituationResponse => {
     if (!fen) {
       return Promise.reject(new Error('No fen'))
     }
@@ -49,7 +45,7 @@ This library was inspired by and contains code from the [lichobile](https://gith
 
 ## License
 
-This project is licensed under the GPL-3.0-or-later License - see the LICENSE file for details.
+This project is licensed under the GPL-3.0-or-later - see the LICENSE file for details.
 
 ## Contributing
 
