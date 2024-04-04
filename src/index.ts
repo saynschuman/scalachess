@@ -9,7 +9,10 @@ import {
   ThreefoldTestRequest,
   ThreefoldTestResponse,
   WorkerMessage,
+  GameSituation,
 } from "./types/common";
+
+export type { SituationRequest, SituationResponse, GameSituation };
 
 export class ScalaChess {
   private worker: Worker;
