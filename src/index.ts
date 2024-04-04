@@ -1,6 +1,6 @@
 import { Color, DestsMap, Key, Role, San, Uci } from "./types/lichess";
 
-const SCALACHESS_URL = "/scalachess.js";
+const SCALACHESS_URL = "./scalachess.js";
 
 export type VariantKey =
   | "standard"

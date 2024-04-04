@@ -1,4 +1,4 @@
-const SCALACHESS_URL = "/scalachess.js";
+const SCALACHESS_URL = "./scalachess.js";
 export function tellWorker(worker, topic, payload) {
     if (payload !== undefined) {
         worker.postMessage({ topic, payload });
