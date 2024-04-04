@@ -20,6 +20,29 @@ This library is packaged as a module. To include it in your project, you can clo
 
 To use scalachess in your project, you'll need to import the necessary types and functions from the module. Here's a basic example:
 
+```javascript
+import { ScalaChess, SituationResponse } from 'scalachess'
+
+/**
+ * Path to scalachess worker
+ * Ex: https://github.com/saynschuman/scalachess/blob/master/public/scalachess.js
+ */
+const worker = new Worker('/scalachess.js')
+const scalaChess = new ScalaChess(worker)
+
+const gemeSituation = (fen: string): SituationResponse => {
+    if (!fen) {
+      return Promise.reject(new Error('No fen'))
+    }
+    const res = await scalaChess.situation({
+      variant: 'standard',
+      fen,
+    })
+
+    return res
+}
+```
+
 ## Acknowledgments
 
 This library was inspired by and contains code from the [lichobile](https://github.com/lichess-org/lichobile) repository. We are grateful to the authors and contributors of lichobile for their work.
