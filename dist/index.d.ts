@@ -1,4 +1,5 @@
-import { DropRequest, MoveRequest, MoveResponse, PgnDumpRequest, PgnDumpResponse, SituationRequest, SituationResponse, ThreefoldTestRequest, ThreefoldTestResponse } from "./types/common";
+import { DropRequest, MoveRequest, MoveResponse, PgnDumpRequest, PgnDumpResponse, SituationRequest, SituationResponse, ThreefoldTestRequest, ThreefoldTestResponse, GameSituation } from "./types/common";
+export type { SituationRequest, SituationResponse, GameSituation };
 export declare class ScalaChess {
     private worker;
     constructor(worker: Worker);
